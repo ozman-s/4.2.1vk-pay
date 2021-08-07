@@ -1,11 +1,11 @@
 package ru.netology
 
 fun main() {
-    val amaunt = 100_585.00
-    val percent = 0.75
-    val minCommission = 35.00
-    val totalPercent = (amaunt * 0.75) / 100
+    val amount = 3600000
+    val percent = 75
+    val minCommission = 3500
+    val totalPercent = (amount * percent) / 10000
 
     val result = if(totalPercent < minCommission) minCommission else totalPercent
-    println("The total commission: $result")
+    println(if (amount <= minCommission) "Сумма перевода должна превышать 3500 копеек" else "Комиссия за перевод составит $result копеек")
 }
